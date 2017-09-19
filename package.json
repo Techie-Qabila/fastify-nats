@@ -1,0 +1,39 @@
+{
+  "name": "fastify-nats",
+  "version": "0.1.0",
+  "description": "Fastify nats plugin",
+  "main": "index.js",
+  "scripts": {
+    "test": "standard && tap test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:mahmed8003/fastify-nats.git"
+  },
+  "keywords": [
+    "fastify",
+    "nats",
+    "messaging",
+    "pubsub",
+    "broker",
+    "rpc"
+  ],
+  "author": "Muhammad Ahmed <mahmed8003@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mahmed8003/fastify-nats/issues"
+  },
+  "homepage": "https://github.com/mahmed8003/fastify-nats#readme",
+  "devDependencies": {
+    "fastify": "^0.25.3",
+    "standard": "^10.0.3",
+    "tap": "^10.7.2"
+  },
+  "dependencies": {
+    "fastify-plugin": "^0.1.0",
+    "nats": "^0.7.20"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  }
+}
