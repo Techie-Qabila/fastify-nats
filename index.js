@@ -25,4 +25,4 @@ function close (fastify, done) {
   done()
 }
 
-module.exports = fp(fastifyNats, '>=0.13.1')
+module.exports = fp(fastifyNats, '>=0.29.0')
