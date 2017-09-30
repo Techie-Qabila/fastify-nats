@@ -30,6 +30,11 @@ fastify.listen(3000, err => {
 })
 ```
 
+and later
+```js
+fastify.nats.publish(topic, message);
+```
+
 ## License
 
 Licensed under [MIT](./LICENSE).
