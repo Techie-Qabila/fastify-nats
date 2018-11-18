@@ -14,12 +14,11 @@ test('fastify.nats should exist', t => {
 
   const fastify = Fastify()
 
-  fastify.register(fastifyNats, natsOpt, (err) => {
-    t.error(err)
-  })
+  fastify.register(fastifyNats, natsOpt)
 
   fastify.ready((err) => {
     t.error(err)
+    t.ok(fastify.hasDecorator('nats'))
     t.ok(fastify.nats)
 
     fastify.close()
