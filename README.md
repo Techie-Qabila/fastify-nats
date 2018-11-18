@@ -24,9 +24,9 @@ fastify.register(require('fastify-nats'), {
   if (err) throw err
 })
 
-fastify.listen(3000, err => {
+fastify.listen(3000, (err, address) => {
   if (err) throw err
-  console.log(`server listening on ${fastify.server.address().port}`)
+  console.log(`server listening on ${address}`)
 })
 ```
 
