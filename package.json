@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/mahmed8003/fastify-nats#readme",
   "devDependencies": {
-    "fastify": "^1.13.0",
+    "fastify": "^1.13.1",
     "standard": "^12.0.1",
     "tap": "^12.1.0"
   },
