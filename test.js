@@ -6,7 +6,7 @@ const Fastify = require('fastify')
 const fastifyNats = require('./index')
 
 const natsOpt = {
-  url: 'nats:demo.nats.io:4222'
+  url: 'nats://demo.nats.io:4222'
 }
 
 test('fastify.nats should exist', t => {
@@ -14,12 +14,11 @@ test('fastify.nats should exist', t => {
 
   const fastify = Fastify()
 
-  fastify.register(fastifyNats, natsOpt, err => {
-    t.error(err)
-  })
+  fastify.register(fastifyNats, natsOpt)
 
-  fastify.ready(err => {
+  fastify.ready((err) => {
     t.error(err)
+    t.ok(fastify.hasDecorator('nats'))
     t.ok(fastify.nats)
 
     fastify.close()
