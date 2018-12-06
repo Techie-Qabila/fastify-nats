@@ -8,10 +8,13 @@
 
 Under the hood [NATS](https://github.com/nats-io/node-nats) client is used, the options that you pass to `register` will be passed to the nats client.
 
+
 ## Install
 ```
 npm i fastify-nats --save
 ```
+
+
 ## Usage
 Add it to you project with `register` and you are done!  
 You can access the *nats Connection* via `fastify.nats`.
@@ -19,7 +22,7 @@ You can access the *nats Connection* via `fastify.nats`.
 const fastify = require('fastify')
 
 fastify.register(require('fastify-nats'), {
-  url: 'nats:demo.nats.io:4222'
+  url: 'nats://demo.nats.io:4222'
 }, err => {
   if (err) throw err
 })
@@ -35,6 +38,15 @@ and later
 fastify.nats.publish(topic, message);
 ```
 
+
+## Requirements
+
+Fastify ^1.1.0 .
+Node.js 8.14.x or later.
+
+
 ## License
 
 Licensed under [MIT](./LICENSE).
+
+----
