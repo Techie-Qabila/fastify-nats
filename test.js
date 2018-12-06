@@ -20,6 +20,7 @@ test('fastify.nats should exist', t => {
 
   fastify.ready(err => {
     t.error(err)
+    t.ok(fastify.hasDecorator('nats'))
     t.ok(fastify.nats)
 
     fastify.close()

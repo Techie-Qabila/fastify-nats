@@ -25,4 +25,7 @@ function close (fastify, done) {
   done()
 }
 
-module.exports = fp(fastifyNats, '>=0.29.0')
+module.exports = fp(fastifyNats, {
+  fastify: '>=1.0.0',
+  name: 'fastify-nats'
+})
